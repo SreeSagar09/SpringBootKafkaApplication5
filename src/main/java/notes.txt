@@ -1,0 +1,23 @@
+A kafka application, one producer and multiple consumers with two different groupId in spring boot:
+Programs:
+* SpringBootKafkaApplication5Application.java
+* OrderCotroller.java
+* Order.java
+* KafkaOrderConsumerService.java
+* KafkaOrderConsumerServiceImpl.java
+* KafkaOrderProducerService.java
+* KafkaOrderProducerServiceImpl.java
+Notes:
+* In one producer multiple consumers with two different groupIds scenario, two different groupIds consumers will listen same message two times.
+Output:
+To place order rest end point:
+http://localhost:8080/SpringBootKafkaApplication5/order/placeOrder
+
+Order [orderId=1389281598160900, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:25:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder3[group-2]]
+Order [orderId=1389281598160900, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:25:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder2[group-1]]
+Order [orderId=1389338822454200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:14 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder4[group-2]]
+Order [orderId=1389338822454200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:14 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Order [orderId=1389341186490600, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder4[group-2]]
+Order [orderId=1389341186490600, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Order [orderId=1389452977054200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:28:08 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder3[group-2]]
+Order [orderId=1389452977054200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:28:08 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder2[group-1]]
