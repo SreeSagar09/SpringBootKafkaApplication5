@@ -7,17 +7,18 @@ Programs:
 * KafkaOrderConsumerServiceImpl.java
 * KafkaOrderProducerService.java
 * KafkaOrderProducerServiceImpl.java
+* CommonUtil.java
 Notes:
 * In one producer multiple consumers with two different groupIds scenario, two different groupIds consumers will listen same message two times.
 Output:
 To place order rest end point:
 http://localhost:8080/SpringBootKafkaApplication5/order/placeOrder
 
-Order [orderId=1389281598160900, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:25:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder3[group-2]]
-Order [orderId=1389281598160900, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:25:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder2[group-1]]
-Order [orderId=1389338822454200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:14 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder4[group-2]]
-Order [orderId=1389338822454200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:14 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
-Order [orderId=1389341186490600, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder4[group-2]]
-Order [orderId=1389341186490600, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:26:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
-Order [orderId=1389452977054200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:28:08 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder3[group-2]]
-Order [orderId=1389452977054200, orderName=Food Order, items=[Biryani, Cakes], orderDate=Thu Dec 18 22:28:08 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder2[group-1]]
+Order [orderId=a249a9b9-cb39-41f9-9a14-f139bdc1cd25, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:00:46 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder3[group-2]]
+Order [orderId=a249a9b9-cb39-41f9-9a14-f139bdc1cd25, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:00:46 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
+Order [orderId=5176e0c5-9fb8-426d-980c-4d8ebd3042cc, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:00:59 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder4[group-2]]
+Order [orderId=5176e0c5-9fb8-426d-980c-4d8ebd3042cc, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:00:59 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder2[group-1]]
+Order [orderId=a167e45f-43ec-4c85-9e9d-a21adfa9df9d, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:01:00 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder2[group-1]]
+Order [orderId=a167e45f-43ec-4c85-9e9d-a21adfa9df9d, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:01:00 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder4[group-2]]
+Order [orderId=fb301758-f820-4890-88d7-bc5b4a436dff, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:01:01 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder3[group-2]]
+Order [orderId=fb301758-f820-4890-88d7-bc5b4a436dff, orderName=Food Order, items=[Biryani, Cakes], orderDate=Mon Jan 05 22:01:01 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
